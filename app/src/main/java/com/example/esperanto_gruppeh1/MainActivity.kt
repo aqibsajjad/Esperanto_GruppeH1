@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Topbar(){
     TopAppBar(
-        title = { Text( text= stringResource(R.string.app_name), fontSize = 24.sp ) },
+        title = { Text( text= stringResource(R.string.app_name), fontSize = 20.sp ) },
         backgroundColor = colorResource(id = R.color.red_200),
         contentColor = colorResource(id = R.color.white)
     )
@@ -51,7 +51,7 @@ fun BottomNavigationBar(){
     )
     BottomNavigation(
         backgroundColor = colorResource(id = R.color.red_200),
-         contentColor= Color.White
+         contentColor= colorResource(id = R.color.white)
     ){
         items.forEach { item ->
             BottomNavigationItem(

@@ -9,10 +9,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-// import androidx.navigation.compose.rememberNavController
+import androidx.navigation.compose.rememberNavController
 import com.example.esperanto_gruppeh1.navigationbar.NavigationItem
 import com.example.esperanto_gruppeh1.ui.theme.Esperanto_GruppeH1Theme
 
@@ -23,7 +22,7 @@ class MainActivity : ComponentActivity() {
             Esperanto_GruppeH1Theme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Ib")
+                    Greeting("Android")
                 }
             }
             MainScreen()
@@ -33,9 +32,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Topbar(){
     TopAppBar(
-        title = { Text(text ="Esperanto", fontSize = 24.sp, textAlign = TextAlign.Center) },
+        title = { Text( text= stringResource(R.string.app_name), fontSize = 20.sp ) },
         backgroundColor = colorResource(id = R.color.red_200),
-        contentColor = colorResource(id = R.color.white),
+        contentColor = colorResource(id = R.color.white)
     )
 }
 @Composable
@@ -52,7 +51,7 @@ fun BottomNavigationBar(){
     )
     BottomNavigation(
         backgroundColor = colorResource(id = R.color.red_200),
-         contentColor= Color.White
+         contentColor= colorResource(id = R.color.white)
     ){
         items.forEach { item ->
             BottomNavigationItem(
@@ -96,6 +95,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     Esperanto_GruppeH1Theme {
-        Greeting("Ib")
+        Greeting("Android")
     }
 }

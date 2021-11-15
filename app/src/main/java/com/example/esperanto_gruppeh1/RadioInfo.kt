@@ -1,33 +1,26 @@
 package com.example.esperanto_gruppeh1
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import androidx.navigation.compose.rememberNavController
+import androidx.core.app.ComponentActivity
 import com.example.esperanto_gruppeh1.navigationbar.NavigationItem
 import com.example.esperanto_gruppeh1.ui.theme.Esperanto_GruppeH1Theme
 
-class MainActivity : ComponentActivity() {
+
+@SuppressLint("RestrictedApi")
+class RadioInfo : ComponentActivity() {
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Esperanto_GruppeH1Theme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
-            MainScreen()
-        }
-    }
+
 }
 @Composable
 fun Topbar(){
@@ -51,12 +44,12 @@ fun BottomNavigationBar(){
     )
     BottomNavigation(
         backgroundColor = colorResource(id = R.color.red_200),
-         contentColor= colorResource(id = R.color.white)
+        contentColor= colorResource(id = R.color.white)
     ){
         items.forEach { item ->
             BottomNavigationItem(
                 icon = { Icon(painterResource(id = item.icon), contentDescription = item.title) },
-                label = { Text(text = item.title)},
+                label = { Text(text = item.title) },
                 selectedContentColor = colorResource(id= R.color.white),
                 //unselectedContentColor = colorResource(id = R.color.white),
                 alwaysShowLabel = true,
@@ -73,17 +66,17 @@ fun BottomNavigationBarPreview(){
 }
 
 @Composable
-fun MainScreen(){
+fun RadioInfoScreen(){
     Scaffold (
         topBar = { Topbar()},
         bottomBar = { BottomNavigationBar()}
     ){
-            }
+    }
 }
 @Preview(showBackground = true)
 @Composable
-fun MainScreenPreview(){
-    MainScreen()
+fun RadioInfoPreview(){
+    RadioInfoScreen()
 }
 
 @Composable
@@ -97,4 +90,6 @@ fun DefaultPreview() {
     Esperanto_GruppeH1Theme {
         Greeting("Android")
     }
+}
+
 }

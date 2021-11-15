@@ -20,8 +20,9 @@
         <entry key="../../../../layout/compose-model-1636965778307.xml" value="0.24359479700433584" />
         <entry key="../../../../layout/compose-model-1636966049504.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.12222222222222222" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.31145833333333334" />
         <entry key="app/src/main/res/drawable/ic_search_img.xml" value="0.12222222222222222" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2703338456021548" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2382679050528355" />
         <entry key="app/src/main/res/layout/fragment_player.xml" value="0.17844202898550723" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.17844202898550723" />
       </map>

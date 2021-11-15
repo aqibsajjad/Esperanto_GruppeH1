@@ -11,16 +11,23 @@
         android:name="com.example.esperanto_gruppeh1.MainActivity"
         android:label="@string/app_name">
         <action
-            android:id="@+id/action_mainactivity_to_playerfragment"
+            android:id="@+id/action_mainactivity_to_searchfragment"
             app:destination="@id/SearchFragment" />
     </fragment>
     <fragment
         android:id="@+id/SearchFragment"
-        android:name="com.example.esperanto_gruppeh1.SearchFragment"
-        android:label="@string/search_fragment_label"
-        tools:layout="@layout/fragment_search_list">
-        <argument
-            android:name="letter"
-            app:argType="string" />
+        android:name="com.example.esperanto_gruppeh1.MainActivity"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_mainactivity_to_searchfragment"
+            app:destination="@id/PlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PlayerFragment"
+        android:name="com.example.esperanto_gruppeh1.MainActivity"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_playerfragment_to_mainactivity"
+            app:destination="@id/MainActivity" />
     </fragment>
 </navigation>
